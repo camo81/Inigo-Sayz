@@ -1,0 +1,25 @@
+<?php
+
+
+/**
+ * Implements hook_theme().
+ */
+function inigo_sayz_theme($existing, $type, $theme, $path) {
+  $variables = array(
+    'inigo_sayz' => array(
+      'variables' => array(
+        'source_text' => NULL,
+      ),
+      'template' => 'inigo_sayz',
+    ),
+  );
+  return $variables;
+}
+
+function inigo_sayz_preprocess(&$variables, $hook)
+{
+  $module_handler = Drupal::service('module_handler');
+  $path = $module_handler->getModule('inigo_sayz')->getPath();
+
+  $variables['module_path'] = $path;
+}

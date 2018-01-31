@@ -1,0 +1,6 @@
+name: Inigo Sayz Module
+description: Creates a page showing Inigo Montoya quotes.
+package: Custom
+
+type: module
+core: 8.x

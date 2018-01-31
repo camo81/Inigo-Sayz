@@ -1,0 +1,16 @@
+inigo_sayz.content:
+  path: '/inigoSayz'
+  defaults:
+    _controller: '\Drupal\inigo_sayz\Controller\InigoSayzController::content'
+    _title: 'Hello, my name is Inigo Montoya!'
+  requirements:
+    _permission: 'access content'
+
+inigo_sayz.config:
+  path: /admin/config/inigoSayz/config
+  defaults:
+    _form: '\Drupal\inigo_sayz\Form\Inigo_sayzConfigForm'
+    _title: 'Inigo Says Configuration'
+  requirements:
+    _permission: 'administer site configuration'
+
